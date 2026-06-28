@@ -47,13 +47,14 @@ export default function WorkoutPlanner() {
         limitations,
       })
       setPlan(result)
-      const saved = saveWorkoutPlan({
-        id: Date.now().toString(),
+      const planId = Date.now().toString()
+      saveWorkoutPlan({
+        id: planId,
         createdAt: new Date().toISOString(),
         plan: result,
         active: true,
       })
-      setActivePlan(saved.id)
+      setActivePlan(planId)
     } catch (err: any) {
       setError(err.message || '生成失败')
     } finally {
