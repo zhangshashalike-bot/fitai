@@ -1,9 +1,9 @@
 // AI Service - 统一的 AI 调用层
 // 支持 OpenAI 兼容 API（可切换为本地模型或其他 provider）
 
-const AI_BASE_URL = import.meta.env.VITE_AI_BASE_URL || 'https://api.openai.com/v1'
-const AI_API_KEY = import.meta.env.VITE_AI_API_KEY || ''
-const AI_MODEL = import.meta.env.VITE_AI_MODEL || 'gpt-4o'
+const AI_BASE_URL = import.meta.env.VITE_AI_BASE_URL || 'https://api.deepseek.com/v1'
+const AI_API_KEY = import.meta.env.VITE_AI_API_KEY || 'sk-21e8df3030034c64bc773753a66e4e06'
+const AI_MODEL = import.meta.env.VITE_AI_MODEL || 'deepseek-chat'
 
 interface AICallOptions {
   systemPrompt: string
